@@ -1,0 +1,37 @@
+
+.test-container{
+  background-color: #202123; 
+  padding: 2% 5%; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff; 
+  }
+  
+  .test-top-section {
+    margin-bottom: 10px;
+  }
+
+  .test-middle-section{
+    padding: 30px;
+  }
+  
+  .test-button{
+    background-color: #0077b6; 
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    flex-grow: 1; 
+    margin: 0 10px; 
+    text-align: center;
+    }
+  
+    .test-back-button{
+      background-color: #555; 
+      text-decoration: none;
+    }
+
+  
+  

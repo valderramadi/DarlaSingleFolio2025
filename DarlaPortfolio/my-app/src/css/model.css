@@ -1,0 +1,139 @@
+.Models-Container {
+  background-color: #202123;
+  padding: 2% 5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+.models-top-section {
+  padding-bottom: 50px;
+}
+
+.All-Options {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.options {
+  flex-grow: 1;
+  max-width: 350px;
+  width: 100%;
+  height: 450px;
+  background-color: #555;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.options {
+  border: 2px solid #dcdcdc; 
+  border-radius: 15px; 
+  padding: 20px; 
+  margin: 10px; 
+  transition: background-color 0.3s; 
+  cursor: pointer; 
+}
+
+.options:hover {
+  background-color: #b1b1b1; 
+}
+
+.options.active {
+  background-color: #17638c; 
+} */
+/* Add or modify in model.css */
+.options {
+  border: 2px solid #dcdcdc; /* Standard border color, adjust as needed */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Inner spacing */
+  margin: 10px 0; /* Spacing between boxes */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  cursor: pointer; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.options div {
+  text-align: left; 
+}
+
+.options div strong {
+  display: block; 
+}
+
+.options div ul {
+  margin-top: 5px; 
+  padding-left: 20px; 
+}
+
+
+.options:hover {
+  background-color: #b1b1b1; 
+}
+
+.options.active {
+  background-color: #17638c; /* Color for the selected option, adjust as needed */
+}
+
+.options h2 {
+  margin-bottom: 10px; /* Space between the title and description */
+}
+
+.options p {
+  font-size: 0.9rem; /* Smaller text for the description */
+  color: #666; /* Subtle color for descriptions */
+}
+
+
+.models-middle-section{
+  padding-bottom: 30px;
+}
+
+
+.models-bottom-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  margin-top: 20px;
+  background-color: #2a2d32; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  margin: 20px 0; 
+  padding: 2%; 
+}
+
+.models-button {
+  background-color: #17638c;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  flex-grow: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.models-back-button {
+  background-color: #555;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .All-Options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .options {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

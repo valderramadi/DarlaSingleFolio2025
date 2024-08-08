@@ -1,0 +1,104 @@
+.download-container {
+  background-color: #202123; 
+  color: #ffffff; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5% 15%;
+  text-align: center;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.download-header h1 {
+  margin-bottom: 2em;
+  font-size: 3em; 
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  margin-bottom: 2em;
+}
+
+.download-button {
+  background-color: #17638c; 
+  color: #ffffff; 
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.download-button:hover {
+  background-color: #144f6a; 
+}
+
+.download-footer p {
+  background-color: #2a2d32; 
+  color: #dcdcdc;
+  padding: 2em;
+  border-radius: 15px;
+  font-size: 1em;
+  margin-top: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+.download-top-section {
+  margin-bottom: 80px;
+} 
+
+}
+
+.download-top-section{
+  margin-bottom: 80px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .download-buttons {
+    flex-direction: column;
+  }
+  
+  .download-button {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  .download-footer p {
+    margin-top: 1em;
+  }
+}
+
+
+    @media (max-width: 768px) {
+      .side-by-side-sections {
+        flex-direction: column; /* Stack the sections vertically on smaller screens */
+        align-items: center; /* Center-align the items */
+      }
+    
+      .download-middle-section,
+      .download-bottom-section {
+        position: static; /* Reset any absolute positioning */
+        flex: 0 1 100%; /* Allow each section to take full width */
+        margin: 10px 0; /* Add some vertical spacing */
+        justify-content: center; /* Center content for these sections */
+      }
+    
+      .download-middle-section,
+      .download-bottom-section {
+        width: auto; /* Allow width to adjust based on content */
+        max-width: none; /* Remove max-width restrictions */
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+    
+
+  
+  

@@ -1,0 +1,40 @@
+console.log(__dirname)
+const express = require('express')
+const Dataset = require('../../../backend/models/datasetModel');
+const router = express.Router()
+
+
+//Get all datasets
+router.get('/', (req, res) => {
+    res.json({msg: 'GET all datasets'})
+})
+
+//Get a single dataset
+router.get('/:id', (req, res) => {
+    res.json({mssg: 'GET a single dataset'})
+})
+
+// POST a new dataset
+router.post('/', async (req, res) => {
+    const {title, load, size} = req.body
+    
+    try {
+      const dataset = await Dataset.create({title, load, size})
+      res.status(200).json(dataset)
+    } catch (error) {
+      res.status(400).json({error: error.message})
+    }
+  })
+
+
+//DELETE a dataset
+router.delete('/:id', (req, res) => {
+    res.json({mssg: 'DELETE a dataset'})
+  })
+
+//Update a dataset
+router.patch('/:id', (req, res) => {
+    res.json({mssg: 'UPDATE a dataset'})
+  })
+
+module.exports = router
