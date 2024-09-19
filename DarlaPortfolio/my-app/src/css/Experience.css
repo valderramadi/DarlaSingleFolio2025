@@ -1,0 +1,100 @@
+.experience-container {
+    padding: 2rem;
+    background-image: url('../assets/contact.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white;
+}
+  
+  .experience-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .vertical-timeline-element-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .vertical-timeline-element-subtitle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  .vertical-timeline-element-subtitle {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: left;
+    /* display: inline-block; */
+    /* width: 70%; Make space for the location */ 
+  }
+
+  .vertical-timeline-element-location {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: right;
+    margin-left: auto;
+    /* float: right;
+    width: 30%; Make space for the company */
+}
+  
+  .vertical-timeline-element-content {
+    background-color: #23283d !important;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.852);
+    border-radius: 8px;
+    color: rgb(255, 255, 255); 
+    padding: 1rem;
+    text-align: justify;
+}
+
+.vertical-timeline-element-content p {
+    margin: 0.5rem 0;
+}
+
+.vertical-timeline-element-content ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.vertical-timeline-element-content li {
+    margin-bottom: 0.5rem;
+}
+
+.company-logo {
+    width: 60px; 
+    height: auto;
+    border-radius: 50%;
+  }
+  
+ .company-logos {
+    width: 80px; 
+    height: auto;
+    border-radius: 50%;
+  }
+
+.company-logotd {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+.tools-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+.tool-icon {
+    width: 40px;
+    height: auto;
+  }
+
+ .tool-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}

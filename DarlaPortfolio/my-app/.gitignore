@@ -25,3 +25,17 @@ yarn-debug.log*
 yarn-error.log*
 package.json
 package-lock.json
+
+# Ignore .vscode folder
+.vscode/
+
+# Ignore .atom folder
+.atom/
+
+# Ignore other environment or system files
+*.log
+*.DS_Store
+
+# Ignore VS Code extensions and system files
+.vscode/extensions/
+*.dll
