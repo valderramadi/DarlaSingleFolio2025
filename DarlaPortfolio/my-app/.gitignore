@@ -55,13 +55,17 @@ tech_support_myproject/
 *.swo
 *.bak
 
-# Ignore media files (optional)
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.svg
+# Ignore media files in specific folders that aren't part of the project
+logs/*.png
+logs/*.jpg
+temp/*.svg
+output/*.png
+
+# Do NOT ignore media files in your project assets
+!src/assets/**/*.png
+!src/assets/**/*.svg
+!public/**/*.png
+!public/**/*.svg
 
 # Ignore archive files
 *.zip
