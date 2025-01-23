@@ -2,10 +2,17 @@
 
 # dependencies
 node_modules/
-/.pnp
+.pnp
 .pnp.js
 .env
+package.json
+package-lock.json
+
+# logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # testing
 /coverage
@@ -13,29 +20,52 @@ node_modules/
 # production
 /build
 
-# misc
+# macOS system files
 .DS_Store
+
+# environment files
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package.json
-package-lock.json
+# Ignore Anaconda-related files
+.anaconda/
+*.lock
+*.pid
+cache_*
 
-# Ignore .vscode folder
+# Python virtual environments and cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore VS Code files
 .vscode/
-
-# Ignore .atom folder
-.atom/
-
-# Ignore other environment or system files
-*.log
-*.DS_Store
-
-# Ignore VS Code extensions and system files
 .vscode/extensions/
 *.dll
+
+# Ignore Atom files
+.atom/
+
+# misc
+*.tmp
+
+# Ignore text, CSV, and document files
+*.txt
+*.csv
+*.docx
+*.rtf
+
+# Ignore Python and Jupyter Notebook files
+*.py
+*.ipynb
+
+# Ignore data and cache folders
+nltk_data/
+miniconda3/
+__pycache__/
+
+# Ignore generated or temporary files
+*.pkl
+*.lock

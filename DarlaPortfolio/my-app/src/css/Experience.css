@@ -4,64 +4,88 @@
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    min-width: 168vh;
     color: white;
+    font-size: 1rem;
 }
   
-  .experience-container h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
+.experience-container h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
   
-  .vertical-timeline-element-title {
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+.vertical-timeline-element-title {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: left;
-  }
+    margin-bottom: 2rem; /* Add space below the role title */
+}
   
-  .vertical-timeline-element-subtitle-container {
+.vertical-timeline-element-subtitle-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem; /* Add space below the company info */
+}
+ 
+.vertical-timeline-element-subtitle {
+    font-size: 1rem;
+    color: #bdbfc7;
+    text-align: left;
+    font-weight: 500;
 }
 
-  .vertical-timeline-element-subtitle {
-    font-size: 1.2rem;
-    color: #ffffff;
-    text-align: left;
-    /* display: inline-block; */
-    /* width: 70%; Make space for the location */ 
-  }
-
-  .vertical-timeline-element-location {
-    font-size: 1.2rem;
-    color: #ffffff;
+.vertical-timeline-element-location {
+    font-size: 1rem;
+    color: #bdbfc7;
     text-align: right;
     margin-left: auto;
-    /* float: right;
-    width: 30%; Make space for the company */
+    font-weight: 500;
 }
   
-  .vertical-timeline-element-content {
+.vertical-timeline-element-content {
     background-color: #23283d !important;
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.852);
     border-radius: 8px;
-    color: rgb(255, 255, 255); 
+    color: #e6e8f1; 
     padding: 1rem;
     text-align: justify;
 }
 
 .vertical-timeline-element-content p {
-    margin: 0.5rem 0;
+    margin-bottom: 2rem 0;
 }
 
 .vertical-timeline-element-content ul {
-    margin: 0;
-    padding-left: 20px;
+    margin-bottom: 2;
+    padding-left: 6px;
 }
 
 .vertical-timeline-element-content li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.9rem;
 }
 
 .company-logo {
@@ -71,7 +95,7 @@
   }
   
  .company-logos {
-    width: 80px; 
+    width: 120px; 
     height: auto;
     border-radius: 50%;
   }
@@ -84,17 +108,18 @@
   }
 
 .tools-icons {
-    margin-top: 1rem;
+    margin-top: 1.8rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.1rem;
   }
   
 .tool-icon {
-    width: 40px;
-    height: auto;
+    width: 58px;
+    height: 52px;
+    cursor: pointer;
   }
 
  .tool-icon:hover {
     transform: scale(1.1);
-    transition: transform 0.2s;
+    transition: transform 0.1s;
 }

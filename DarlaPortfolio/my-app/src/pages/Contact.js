@@ -1,26 +1,32 @@
+
+import Hero from "../components/Hero";
 import React from "react";
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import ContactImng from "../assets/contact.jpg";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
+import '../css/contact.css'; // Ensure you include your CSS styles
+import techBackground from '../assets/techbackground.mp4';
+import '../components/Footer.js';
 
 const Contact = () => {
   return (
-    <div>
-    <Navbar />
-    <div className="contact-image-container">
-    <img className="contact-image" src={ContactImng} alt="Contact Image" />
-   </div>
-    <Hero 
-    cName=".hero-mid"
-    title="Contact me!"
-    btnClass="hide"
-    />
-    <ContactForm />
-    <Footer />
-   </div>
-  );                  
+    <div className="contact-page">
+      {/* Video Background */}
+      <div className="video-container">
+        <video autoPlay loop muted className="background-video">
+          <source src={techBackground} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Content */}
+      <Navbar />
+      <div className="content-container" >
+        <ContactForm />
+      </div>
+      {/* <Footer /> */}
+    </div>
+  );
 };
 
 export default Contact;

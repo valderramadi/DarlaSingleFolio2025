@@ -1,46 +1,46 @@
-const express = require('express');
-const router = express.Router();
-const { generateSample } = require('../../services/openaiService');
-const Project = require('../../models/Project');
-const { fineTuneModel } = require('../../services/openaiFineTuning');
+// const express = require('express');
+// const router = express.Router();
+// const { generateSample } = require('../../services/openaiService');
+// const Project = require('../../models/Project');
+// const { fineTuneModel } = require('../../services/openaiFineTuning');
 
-// POST a new project
-router.post('/', async (req, res) => {
-    const { projectTitle, toolDescription } = req.body;
+// // POST a new project
+// router.post('/', async (req, res) => {
+//     const { projectTitle, toolDescription } = req.body;
 
-    try {
-        const samples = await generateSample(projectTitle, toolDescription);
+//     try {
+//         const samples = await generateSample(projectTitle, toolDescription);
         
-        const newProject = new Project({
-            projectTitle,
-            toolDescription,
-            samples // Assuming this is the structure you wish to save
-        });
+//         const newProject = new Project({
+//             projectTitle,
+//             toolDescription,
+//             samples // Assuming this is the structure you wish to save
+//         });
 
-        await newProject.save();
+//         await newProject.save();
 
-        res.status(201).json({ message: 'Project created successfully', projectTitle, toolDescription, samples });
-    } catch (error) {
-        console.error("Failed to process the project with OpenAI:", error);
-        if (!res.headersSent) {
-            res.status(500).send("Failed to process the project with OpenAI");
-        }
-    }
-});
+//         res.status(201).json({ message: 'Project created successfully', projectTitle, toolDescription, samples });
+//     } catch (error) {
+//         console.error("Failed to process the project with OpenAI:", error);
+//         if (!res.headersSent) {
+//             res.status(500).send("Failed to process the project with OpenAI");
+//         }
+//     }
+// });
 
 
-// Endpoint to trigger fine tuning
-router.post('/fine-tune', async (req, res) => {
-    try {
-        // Start the fine tuning process
-        await fineTuneModel(); // Adjust this call to match how your fineTuneModel function is set up
+// // Endpoint to trigger fine tuning
+// router.post('/fine-tune', async (req, res) => {
+//     try {
+//         // Start the fine tuning process
+//         await fineTuneModel(); // Adjust this call to match how your fineTuneModel function is set up
 
-        console.log("Fine-tuning process started.");
-        res.status(200).send("Fine-tuning process started successfully");
-    } catch (error) {
-        console.error("Error starting fine-tuning process:", error);
-        res.status(500).send("Failed to start fine-tuning process");
-    }
-});
+//         console.log("Fine-tuning process started.");
+//         res.status(200).send("Fine-tuning process started successfully");
+//     } catch (error) {
+//         console.error("Error starting fine-tuning process:", error);
+//         res.status(500).send("Failed to start fine-tuning process");
+//     }
+// });
 
-module.exports = router;
+// module.exports = router;

@@ -1,33 +1,33 @@
-
-export const MenuItems =[
+export const MenuItems = [
     {
-        title: 'Home',
-        url: '/home',
-        cName: 'nav-links',
-        icon: "fa-solid fa-house"
+      title: "Home",
+      url: "home", // Matches the id="home" in MainPage.js
+      cName: "nav-links",
+      icon: "fa-solid fa-house",
     },
     {
-        title: 'About',
-        url: '/about',
-        cName: 'nav-links',
-        icon: "fa-solid fa-circle-info"
+      title: "Experience",
+      url: "experience", // Matches the id="experience" in MainPage.js
+      cName: "nav-links",
+      icon: "fas fa-briefcase",
     },
     {
-        title: 'Contact',
-        url: '/contact',
-        cName: 'nav-links',
-        icon: "fa-solid fa-address-book"
+      title: "Resume",
+      url: "resume", // Matches the id="resume" in MainPage.js
+      cName: "nav-links",
+      icon: "fas fa-file-alt",
     },
     {
-        title: 'Experiences',
-        url: '/experiences',
-        cName: 'nav-links',
-        icon: "fa-solid fa-address-book"
-        },
-    {
-        title: 'Resume',
-        url: '/resume',
-        cName: 'nav-links',
-        icon: "fa-solid fa-address-book"
+      title: "Projects",
+      url: "projects", // Matches the id="projects" in MainPage.js
+      cName: "nav-links",
+      icon: "fas fa-folder",
     },
-]
+    {
+      title: "Contact",
+      url: "contact", // Matches the id="contact" in MainPage.js
+      cName: "nav-links",
+      icon: "fas fa-envelope",
+    },
+  ];
+  

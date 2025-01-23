@@ -1,39 +1,23 @@
-import './App.css';
-import Home from './pages/Home';
-import AutomationProcess from './pages/AutomationProcess';
-import CreateProject from './pages/CreateProject';
-import DataEvaluation from './pages/DataEvaluation';
-import NoPage from './pages/NoPage';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import RecommendedModels from './pages/RecommendedModels';
-import DownloadModel from './pages/DownloadModel';
-import LoginForm from './pages/LoginForm';
-import RegistrationPage from './pages/RegistrationPage';
-import Contact from './pages/Contact';
-import About from './pages/About';
-import ProjectSamplesDisplay from './pages/ProjectSamplesDisplay';
+import "./App.css";
+import MainPage from "./MainPage";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 
 function App() {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      offset: 100,    // Offset from the original trigger point
+      once: false,     // Whether animation should happen only once
+    });
+  }, []);
+
   return (
-    <div className="App"> 
-    <BrowserRouter>
-    <Routes>
-      <Route index element={<Home/>} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/createproject" element={<CreateProject />} />
-      <Route path="/samples-display" element={<ProjectSamplesDisplay />} />
-      <Route path="/dataevaluation" element={<DataEvaluation />} />
-      <Route path="/automationprocess" element={<AutomationProcess />} />
-      <Route path="/recommendedmodels" element={<RecommendedModels />} />
-      <Route path="/downloadmodel" element={<DownloadModel />} />
-      <Route path="/login" element={<LoginForm />} />
-      <Route path="/registrationpage" element={<RegistrationPage />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/about" element={<About />} />
-      <Route path="*" element={<NoPage /> } />
-    </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <MainPage />
     </div>
   );
 }

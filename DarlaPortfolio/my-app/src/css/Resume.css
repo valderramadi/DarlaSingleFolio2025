@@ -1,95 +1,87 @@
-/* .resume-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .download-btn-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .download-btn button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: rgb(161, 41, 41);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .download-btn button:hover {
-    background-color: #0056b3;
-  }
-   */
-
-/* Resume.css */
-.resume-container {
+.resume-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 2rem;
+  background: url('../assets/contact.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Optional: For a parallax scrolling effect */
+  min-height: 175vh;
+  min-width: 168vh;
 }
+
 
 .resume-header {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #fffbfb;
+  /* animation: slideInFromLeft 2.5s ease-in-out;
+
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  } */
+}
+
+.resume-container {
+  width: 80%;
+  max-width: 900px;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-.resume-title {
-  font-size: 2.5rem;
-  text-decoration: underline;
-  margin-bottom: 10px;
-}
-
-.resume-image-container {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .resume-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  object-fit: contain;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for better appearance */
+  border-radius: 10px;
 }
 
-.download-btn {
-  display: flex;
-  align-items: center;
-  background-color: #007bff;
+
+.resume-download .download-button {
+  position: relative; /* Keeps the button within the Resume section */
+  right: -35rem; /* Adjust this to move the button horizontally */
+  display: block; /* Ensures it doesn't overlap */
+  margin: 0 auto; /* Centers the button */
+  top: -55rem; /* Resets any inherited positioning */
+}
+
+
+.download-button {
+  background: linear-gradient(45deg, #2e4a68, #495b6d);
   color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  text-align: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none; /* Remove underline from the text */
+  transition: transform 0.2s, background-color 0.3s ease;
 }
 
-.download-link {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
+.download-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #495b6d, #2e4a68);
 }
 
-.download-link .icon {
-  margin-right: 10px;
-}
+@media (max-width: 768px) {
+  .resume-container {
+    width: 100%;
+    padding: 1rem;
+  }
 
-.fixed-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
+  .resume-image {
+    width: 100%;
+  }
 
-.hidden {
-  display: none;
+  .download-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
 }
