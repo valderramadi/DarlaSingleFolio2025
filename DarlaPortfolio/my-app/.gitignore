@@ -1,71 +1,88 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Dependencies and node_modules
 node_modules/
-.pnp
-.pnp.js
-.env
-package.json
-package-lock.json
 
-# logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# testing
-/coverage
-
-# production
-/build
-
-# macOS system files
-.DS_Store
-
-# environment files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Ignore Anaconda-related files
-.anaconda/
-*.lock
-*.pid
-cache_*
-
-# Python virtual environments and cache
-__pycache__/
-*.pyc
+# Ignore Python-related files and directories
+*.py
 *.pyo
+*.pyc
+*.ipynb
+__pycache__/
+.ipynb_checkpoints/
+*.pkl
+*.egg-info/
 
-# Ignore VS Code files
-.vscode/
-.vscode/extensions/
-*.dll
-
-# Ignore Atom files
-.atom/
-
-# misc
-*.tmp
-
-# Ignore text, CSV, and document files
+# Ignore .txt, .csv, and .docx files
 *.txt
 *.csv
 *.docx
 *.rtf
 
-# Ignore Python and Jupyter Notebook files
-*.py
-*.ipynb
+# Ignore database files
+*.db
 
-# Ignore data and cache folders
-nltk_data/
+# Ignore logs, temp, and output files
+*.log
+*.tmp
+*.temp
+logs/
+output.txt
+output_plot.pdf
+
+# Ignore system files
+.DS_Store
+._*
+.Trashes
+.Spotlight-V100
+.fseventsd
 miniconda3/
-__pycache__/
+nltk_data/
+mysqld/
 
-# Ignore generated or temporary files
-*.pkl
-*.lock
+# Ignore IDE and workspace-related directories
+.vscode/
+eclipse/
+eclipse-workspace/
+.idea/
+
+# Ignore other project directories
+my-appCapstoneFinal/
+testing-project1/
+tech_support_myproject/
+
+# Ignore temporary and backup files
+~$*
+*.swp
+*.swo
+*.bak
+
+# Ignore media files (optional)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+
+# Ignore archive files
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Ignore large machine learning files (optional)
+*.model
+*.weights
+*.ckpt
+*.onnx
+*.tflite
+
+# Ignore compiled Java files
+*.class
+
+# Ignore MATLAB and script outputs (optional)
+*.mat
+*.mex
+*.out
+
+# Ignore MacOS resource forks
+.AppleDouble
