@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaDownload } from 'react-icons/fa';
 import '../css/Resume.css';
-import backgroundImage from '../assets/contact.jpg'; // Import the background image
 
 const Resume = () => {
   return (
@@ -12,13 +11,13 @@ const Resume = () => {
         data-aos-duration="1500"
         className="resume-header"
       >
-        My Resume
+        Resume
       </h2>
 
       {/* Display Resume Image */}
       <div className="resume-container">
         <img
-          src={`${process.env.PUBLIC_URL}/2024 Resume DIV copy.jpg`} // Update the path to your image
+          src={`${process.env.PUBLIC_URL}/Darla_Valderrama_2025_Resume copy.jpg`} // Update the path to your image
           alt="Darla Valderrama Resume"
           className="resume-image"
         />
@@ -27,8 +26,8 @@ const Resume = () => {
       {/* Download Button */}
       <div className="resume-download">
         <a
-          href={`${process.env.PUBLIC_URL}/resume.pdf`}
-          download="Darla_Valderrama_Resume.pdf"
+          href={`${process.env.PUBLIC_URL}/resume2025.pdf`}
+          download="Darla_Valderrama_2025_Resume.pdf"
           className="download-button"
         >
           <FaDownload style={{ marginRight: "0.5rem" }} />

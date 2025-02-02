@@ -6,24 +6,27 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { Tooltip } from 'react-tooltip';
 
-import { FaBriefcase } from 'react-icons/fa';
-
 import CompanyLogo from '../assets/buenaola.jpeg'; 
 import CompanyLogos from '../assets/ifes.png';
 import CompanyLogostd from '../assets/tdbank.png';
+import CompLogo from '../assets/querri.jpeg';
 
 import AlphalensIcon from '../assets/icons/alphalens.svg';
 import BeautifulSoupIcon from '../assets/icons/beautifulsoup.svg';
 import CRMIcon from '../assets/icons/crm.svg';
 import ExcelIcon from '../assets/icons/excel.svg';
 import GoogleColabIcon from '../assets/icons/googlecolab.svg';
-import MBLIcon from '../assets/icons/mbl.svg';
 import MicroPowerPointIcon from '../assets/icons/microsoftpowerpoint.svg';
 import PythonIcon from '../assets/icons/python.svg';
 import QuickBooksIcon from '../assets/icons/quickbooks.svg';
 import SQLIcon from '../assets/icons/sql.svg';
 import SurveyMonkeyIcon from '../assets/icons/surveymonkey.svg';
 import TDMblIcon from '../assets/icons/tdbmbl.svg';
+import javaScriptIcon from '../assets/icons/javascript.svg';
+import mongoDb from '../assets/icons/mongodb.svg';
+import express from '../assets/icons/express.svg';
+import react from '../assets/icons/react.svg';
+import node_js from '../assets/icons/node.js.svg';
 
 
 const experiences = [
@@ -64,10 +67,10 @@ const experiences = [
         { name: 'Microsoft Power Point', icon: MicroPowerPointIcon },
         { name: 'Survey Monkey', icon: SurveyMonkeyIcon },
       ],
-},
+  },
 
   { 
-    title: 'Technical Support Specialist ',
+    title: 'Technical Support Specialist',
     company: 'TD Bank', 
     location: 'Greenville, SC',
     description: [
@@ -75,7 +78,7 @@ const experiences = [
       'Provided multi-channel support (chat, phone, email) to resolve financial transaction issues, using diagnostic tools and CRM systems to enhance customer satisfaction by 23%',
       'Utilized MBL logs to troubleshoot connectivity with Quicken/QuickBooks and generate performance reports, significantly improving system reliability.'
     ],
-    dates: 'April 2022 – Present',
+    dates: 'April 2022 – September 2024',
     icon: <img src={CompanyLogostd} alt="Company Logostd" className="company-logotd" />,
     tools: [
         { name: 'Excel', icon: ExcelIcon },
@@ -84,6 +87,28 @@ const experiences = [
         { name: 'TDMBL', icon: TDMblIcon },
       ],
   },
+
+  {
+    title: 'AI Product Developer (Capstone Sponsorship)',
+    company: 'Querri',
+    location: 'Charleston, SC',
+    description: [
+      'Collaborated in a cross-functional Agile team, integrating backend logic with UI components and assisting in bridging frontend-backend interactions.',
+      'Designed and optimized database storage solutions, reducing dataset preparation time by 31%, improving system efficiency for AI model fine-tuning.', 
+      'Developed and refined backend API endpoints to facilitate seamless communication between the frontend and OpenAI’s generative pre-trained models.',
+    ],
+    dates: 'January – May 2024',
+    icon: <img src={CompLogo} alt="Company Logos" className="company-logos" />, 
+    tools: [
+        { name: 'JavaScript', icon: javaScriptIcon },
+        { name: 'MongoDB', icon: mongoDb },
+        { name: 'Express', icon: express },
+        { name: 'React', icon: react },
+        { name: 'Node.js', icon: node_js },
+      ],
+  },
+
+  
 ];
 
 const Experience = () => {

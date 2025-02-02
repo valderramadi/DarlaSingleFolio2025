@@ -158,22 +158,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
-    height: 170px;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center items vertically */
+    width: 205px;
+    height: 205px;
+    background: rgba(255, 255, 255, 0.156); /* Semi-transparent background */
     border-radius: 50%; /* Circle shape */
     color: white;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.27rem;
+    font-weight: 400;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     transition: transform 0.3s ease, background 0.3s ease;
+    /* animation: float 2s ease-in-out infinite; */
   }
+
   
   .highlight-circle:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-12px) scale(1.03); /* Lift effect on hover */
     background: rgba(255, 255, 255, 0.4); /* Brighter hover effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Soft glowing effect */
   }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+  
   
   .highlights-section span {
     text-align: center;
@@ -186,11 +199,11 @@
       top: 70%; /* Adjust placement for smaller screens */
     }
   
-    .highlight-circle {
-      width: 80px;
-      height: 70px;
-      font-size: 0.9rem;
-    }
+  .highlight-circle {
+    width: 100px;
+    height: 90px;
+    font-size: 0.9rem;
+  }
   }
 
   .hidden {
@@ -204,4 +217,20 @@
     transform: scale(1); /* Grow to full size */
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
+
+
+  .highlight-circle span {
+    margin-bottom: 11px; /* Adds spacing between text and icon */
+  }
+
   
+  .highlight-icon {
+    width: 90px;  /* Adjust size */
+    height: 55px;
+  }
+
+  .coffee-icon {
+    width: 110px;  /* Increase size */
+    height: 75px;  /* Adjust height */
+    margin-top: -8px; /* Moves icon down slightly */
+}

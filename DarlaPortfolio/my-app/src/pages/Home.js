@@ -5,6 +5,15 @@ import Hero from "../components/Hero";
 import BackgroundVideo from "../assets/techbackground.mp4";
 import { ReactTyped } from "react-typed";
 
+// import romanticMusic from '../assets/icons/romantic-music-music-svgrepo-com.svg';
+// import neuralNet from '../assets/icons/neuralnet.svg'
+
+import musicDS from '../assets/icons/musicDS.svg';
+// import dataScience from '../assets/icons/datascience.svg';
+import coffeeLove from '../assets/icons/coffeelove.svg';
+import dS from '../assets/icons/DS.svg';
+
+
 function Home() {
   const [showSecondLine, setShowSecondLine] = useState(false);
   const [circleVisibility, setCircleVisibility] = useState([false, false, false]);
@@ -66,21 +75,24 @@ function Home() {
             circleVisibility[0] ? "visible" : "hidden"
           }`}
         >
-          <span>Passion: Data Storytelling & Music 🎵</span>
+          <span>Passions: Music, Fashion, Coffee </span>
+          <img src={coffeeLove} alt="coffee love" className="highlight-icon coffee-icon" />
         </div>
         <div
           className={`highlight-circle ${
             circleVisibility[1] ? "visible" : "hidden"
           }`}
         >
-          <span>Data Scientist | Analyst 💻 </span>
+          <span>Data Scientist / Analyst </span>
+          <img src={dS} alt="data science" className="highlight-icon" />
         </div>
         <div
           className={`highlight-circle ${
             circleVisibility[2] ? "visible" : "hidden"
           }`}
         >
-          <span>Python, SQL, ML ⚙️ </span>
+          <span> Data Storytelling & Machine Learning</span>
+          <img src={musicDS} alt="music DS" className="highlight-icon" />
         </div>
       </div>
     </div>

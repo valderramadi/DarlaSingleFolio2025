@@ -18,18 +18,6 @@
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #fffbfb;
-  /* animation: slideInFromLeft 2.5s ease-in-out;
-
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  } */
 }
 
 .resume-container {

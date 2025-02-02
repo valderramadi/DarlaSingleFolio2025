@@ -73,7 +73,7 @@ class Navbar extends Component {
         >
           <iframe
             style={{ borderRadius: "10px" }}
-            src="https://open.spotify.com/embed/playlist/37sLgz32hXQYT5ORDzBwCJ?utm_source=generator"
+            src="https://open.spotify.com/embed/playlist/6x9mkRpNdXlM54AKhXhnAr?utm_source=generator&theme=0" 
             width="300"
             height="380"
             frameBorder="0"

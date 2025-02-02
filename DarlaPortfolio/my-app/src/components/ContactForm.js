@@ -18,32 +18,42 @@ function ContactForm() {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus(''); // Clear any previous status messages
+    
+        // Check if all fields are filled
+        if (!formData.name || !formData.email || !formData.message) {
+            setStatus('All fields are required.');
+            return; // Stop further execution
+        }
+    
         try {
-            const response = await fetch('http://localhost:5000/api/contact', {
+            const response = await fetch('http://localhost:5001/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
-
+    
+            const result = await response.json(); // Parse the response
+            console.log('Backend response:', result);
+    
             if (response.ok) {
                 setStatus('Message sent successfully!');
                 setFormData({ name: '', email: '', message: '' }); // Clear form fields
             } else {
-                setStatus('Failed to send message. Please try again later.');
+                setStatus(result.error || 'Failed to send message. Please try again later.');
             }
         } catch (error) {
             console.error('Error submitting form:', error);
             setStatus('An error occurred. Please try again.');
         }
     };
+    
 
     return (
         <div className="contact-page">
-            <div className="contact-left" data-aos="fade-right" data-aos-duration="1500">
+            <div className="contact-left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
                 <h2>I WOULD LOVE TO HEAR FROM YOU!</h2>
                 <h1 className="contact-header">Contact.</h1>
                 <form className="contact-form" onSubmit={handleSubmit}>
@@ -78,7 +88,7 @@ function ContactForm() {
                 </form>
                 {status && <p className="status-message">{status}</p>} {/* Display status message */}
             </div>
-            <div className="contact-right" data-aos="fade-left" data-aos-duration="1500">
+            <div className="contact-right" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
                 <img
                     src={process.env.PUBLIC_URL + "/dv favicon website.png"} 
                     alt="DV Favicon" 
