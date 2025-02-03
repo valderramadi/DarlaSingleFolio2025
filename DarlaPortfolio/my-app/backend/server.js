@@ -5,20 +5,20 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
-// Middleware
+// middleware 
 app.use(express.json());
 
-// Apply CORS middleware
+// applying CORS middleware
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow your frontend's origin
-    methods: ['GET', 'POST'], // Specify allowed HTTP methods
-    allowedHeaders: ['Content-Type'], // Specify allowed headers
+    origin: 'http://localhost:3000', // allowing frontend's origin
+    methods: ['GET', 'POST'], // specify allowed HTTP methods
+    allowedHeaders: ['Content-Type'], // specify allowed headers
 }));
 
-// Handle preflight requests for `/api/contact`
+// handles preflight requests for `/api/contact`
 app.options('/api/contact', cors());
 
-// Nodemailer transporter
+// nodemailer transporter if use
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-// Verify Nodemailer transporter
+// verify nodemailer transporter
 transporter.verify((error, success) => {
     if (error) {
         console.error("Error verifying transporter:", error);
@@ -36,28 +36,28 @@ transporter.verify((error, success) => {
     }
 });
 
-// Email API route
+// email API route ...
 app.post("/api/contact", async (req, res) => {
     const { name, email, message } = req.body;
 
-    // Debug log for incoming data
+    // debug log for incoming data
     console.log("Contact Form Submission:", req.body);
 
-    // Validate fields
+    // validate fields
     if (!name || !email || !message) {
         return res.status(400).json({ error: "All fields are required" });
     }
 
     const mailOptions = {
-        from: process.env.EMAIL_USER, // Sender's email
-        replyTo: email, // Reply to the user's email
-        to: process.env.EMAIL_USER, // Recipient (your email)
+        from: process.env.EMAIL_USER, // sender's email lives here
+        replyTo: email, // reply to the user's email here
+        to: process.env.EMAIL_USER, // recipient (my email)
         subject: `New Message from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
 
     try {
-        // Send email
+        // sending email
         const info = await transporter.sendMail(mailOptions);
         console.log("Email sent successfully:", info.response);
         res.status(200).json({ message: "Message sent successfully!" });
@@ -67,6 +67,6 @@ app.post("/api/contact", async (req, res) => {
     }
 });
 
-// Start server
+// starting server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

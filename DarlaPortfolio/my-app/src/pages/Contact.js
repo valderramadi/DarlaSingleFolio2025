@@ -1,8 +1,6 @@
-// import Hero from "../components/Hero";
 import React from "react";
 import Navbar from "../components/Navbar";
 import ContactForm from "../components/ContactForm";
-// import Footer from "../components/Footer";
 import '../css/contact.css'; 
 import techBackground from '../assets/techbackground.mp4';
 import '../components/Footer.js';
@@ -18,7 +16,7 @@ import jupyter from "../assets/icons/jupyternotebook.svg";
 const Contact = () => {
   return (
       <div className="contact-page">
-          {/* Video Background */}
+          {/* video background displays here*/}
           <div className="video-container">
               <video autoPlay loop muted className="background-video">
                   <source src={techBackground} type="video/mp4" />
@@ -26,13 +24,13 @@ const Contact = () => {
               </video>
           </div>
 
-          {/* Content */}
+          {/* some content */}
           <Navbar />
           <div className="content-container">
               <ContactForm />
           </div>
 
-          {/* Skills Section */}
+          {/* skills sec */}
           <div className="skills-container">
               <div className="skill">
                   <img src={python} alt="Python" className="skill-icon" />
@@ -60,7 +58,7 @@ const Contact = () => {
               </div>
           </div>
 
-          {/* <Footer /> */}
+          {/* <footer add later /> */}
       </div>
   );
 };

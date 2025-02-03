@@ -1,31 +1,30 @@
-
-import { useState } from 'react'; // Import useState for form state handling
+import { useState } from 'react'; // importing useState for form state handling
 import '../css/contact.css';
 import '../components/Footer.js';
 
 function ContactForm() {
-    // State for form data and submission status
+    // states for form data and submission status
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
     });
 
-    const [status, setStatus] = useState(''); // Status message for success/error feedback
+    const [status, setStatus] = useState(''); // this status message serves for success/error feedback
 
-    // Handle input changes
+    // handles input changes ...
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus(''); // Clear any previous status messages
+        setStatus(''); 
     
-        // Check if all fields are filled
+        // checks if all fields are filled here 
         if (!formData.name || !formData.email || !formData.message) {
             setStatus('All fields are required.');
-            return; // Stop further execution
+            return; // does not allow for further execution
         }
     
         try {
@@ -35,12 +34,12 @@ function ContactForm() {
                 body: JSON.stringify(formData),
             });
     
-            const result = await response.json(); // Parse the response
+            const result = await response.json(); // parses response
             console.log('Backend response:', result);
     
             if (response.ok) {
                 setStatus('Message sent successfully! I’ll get back to you soon.');
-                setFormData({ name: '', email: '', message: '' }); // Clear form fields
+                setFormData({ name: '', email: '', message: '' }); // clears form fields
             } else {
                 setStatus(result.error || 'Failed to send message. Please try again later.');
             }
@@ -86,7 +85,7 @@ function ContactForm() {
                     
                     <button type="submit">Send Message</button>
                 </form>
-                {status && <p className="status-message">{status}</p>} {/* Display status message */}
+                {status && <p className="status-message">{status}</p>} {/* display status message */}
             </div>
             <div className="contact-right" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
                 <img

@@ -2,12 +2,12 @@
 
 import Navbar from "./components/Navbar";
 import './css/mainpage.css';
-import Home from './pages/Home'; // Import your About section component
-import Experience from './pages/Experience'; // Import your Experience section component
-import Resume from './pages/Resume'; // Import your Resume section component
+import Home from './pages/Home'; 
+import Experience from './pages/Experience'; 
+import Resume from './pages/Resume'; 
 import Projects from './pages/Projects'
-import Contact from './pages/Contact'; // Import your Contact section component
-// import Footer from './components/Footer';
+import Contact from './pages/Contact'; 
+
 
 const MainPage = () => {
   return (

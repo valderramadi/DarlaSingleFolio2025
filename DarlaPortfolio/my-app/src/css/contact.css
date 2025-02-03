@@ -1,6 +1,4 @@
-/* =======================
-   General Styling
-======================= */
+/* general styling stated here*/
 .contact-page {
   display: flex;
   justify-content: center;
@@ -10,17 +8,16 @@
   height: 100vh;
   flex-wrap: wrap;
   color: white;
-  gap: 3rem; /* Adds space between the left and right sections */
+  gap: 3rem; 
 }
 
-/* =======================
-   Left Container (Form)
-======================= */
+
+/* left container (form) */
 .contact-left {
   flex: 1;
   max-width: 40%;
   padding: 4rem;
-  background-color: #1f1f2e; /* Slightly lighter dark background */
+  background-color: #1f1f2e;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   text-align: left; 
@@ -32,13 +29,13 @@
   font-weight: bold;
   margin-bottom: 1rem;
   color: white;
-  margin-bottom: 2.5rem; /* Increase the space below the header */
+  margin-bottom: 2.5rem; 
 }
 
 .contact-left h2 {
-  font-size: 1.2rem; /* Optional: Adjust font size for the h2 */
-  margin-top: -2rem; /* Add space above the h2 (I would love to hear from you) */
-  line-height: 2.5; /* Optional: Improve readability of the h2 text */
+  font-size: 1.2rem; 
+  margin-top: -2rem; 
+  line-height: 2.5; 
 }
 
 .contact-form {
@@ -58,13 +55,13 @@
   border-radius: 5px;
   border: none;
   font-size: 1rem;
-  background-color: #2d2d3e; /* Dark input background */
+  background-color: #2d2d3e; 
   color: white;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #bbb; /* Subtle placeholder color */
+  color: #bbb; 
 }
 
 .contact-form button {
@@ -76,17 +73,14 @@
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  /* transition: background-color 0.3s ease; */
 }
 
 .contact-form button:hover {
   background-color: #4c4c69;
 }
 
-/* =======================
-   Right Container (Graphic)
-======================= */
-/* Right container for the graphic */
+
+/* right container for the graphic */
 .contact-right {
   flex: 1;
   display: flex;
@@ -96,72 +90,70 @@
   animation: slideInFromRight 1.5s ease-in-out;
 }
 
-/* Styling for the image */
+/* styling for pic */
 .contact-image {
-  max-width: 85%; /* Adjust as needed for scaling */
+  max-width: 85%; 
   height: auto;
-  border-radius: 50%; /* Makes the image circular */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for better contrast */
+  border-radius: 50%; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 
-/* =======================
-   Video Background
-======================= */
+/* video background here */
 .video-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Push the video to the background */
+  z-index: -1; 
   overflow: hidden;
 }
 
 .background-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video covers the screen */
+  object-fit: cover; 
 }
 
-/* =======================
-   Content on Top of Video
-======================= */
+
+/* my cntent on top of video */
 .content-container {
   position: relative;
   z-index: 1;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-page {
-    flex-direction: column; /* Stack sections vertically */
+    flex-direction: column; 
     align-items: center;
   }
 
   .contact-left,
   .contact-right {
-    max-width: 100%; /* Full width on smaller screens */
+    max-width: 100%; 
   }
 
   .contact-right {
-    margin-top: 2rem; /* Add space between stacked sections */
+    margin-top: 2rem; 
   }
 }
 
 .status-message {
   margin-top: 1rem;
   font-size: 1rem;
-  color: white; /* Success: white or green */
+  color: white; 
 }
 .status-message.error {
-  color: red; /* Optional: Style for error messages */
+  color: red; 
 }
 
 
 .skills-container {
   display: flex;
   justify-content: center;
-  gap: 46px; /* Adjust spacing between icons */
+  gap: 46px; 
   margin-top: -15px;
   flex-wrap: wrap;
 }
@@ -171,15 +163,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  animation: floatEffect 2s ease-in-out infinite; /* Floating Effect */
+  animation: floatEffect 2s ease-in-out infinite;
   transition: transform 0.3s ease-in-out;
-  perspective: 1000px; /* Enables 3D depth */
+  perspective: 1000px; 
 }
 
 
-/* Label Text */
 .skill-label {
-  margin-top: 4.5px; /* Reduce spacing between icon and label */
+  margin-top: 4.5px; 
   font-size: 1.13rem;
   font-weight: 400;
   color: rgb(255, 255, 255);
@@ -205,11 +196,11 @@
 }
 
 .skill-icon {
-  width: 90px; /* Adjust icon size */
+  width: 90px; 
   height: 93px;
   object-fit: contain;
   transition: transform 1s ease-in-out;
-  transform-style: preserve-3d; /* Enables 3D transformation */
+  transform-style: preserve-3d;
   animation: rotate3D 5s infinite ease-in-out;
 }
 

@@ -76,22 +76,22 @@
 
     @media (max-width: 768px) {
       .side-by-side-sections {
-        flex-direction: column; /* Stack the sections vertically on smaller screens */
-        align-items: center; /* Center-align the items */
+        flex-direction: column; 
+        align-items: center; 
       }
     
       .download-middle-section,
       .download-bottom-section {
-        position: static; /* Reset any absolute positioning */
-        flex: 0 1 100%; /* Allow each section to take full width */
-        margin: 10px 0; /* Add some vertical spacing */
-        justify-content: center; /* Center content for these sections */
+        position: static; 
+        flex: 0 1 100%; 
+        margin: 10px 0; 
+        justify-content: center; 
       }
     
       .download-middle-section,
       .download-bottom-section {
-        width: auto; /* Allow width to adjust based on content */
-        max-width: none; /* Remove max-width restrictions */
+        width: auto; 
+        max-width: none; 
         padding-right: 0;
         padding-left: 0;
         margin-right: 0;

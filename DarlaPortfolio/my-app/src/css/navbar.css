@@ -12,7 +12,7 @@
   left: 50%;
   transform: translate(-50%);
   z-index: 9999;
-  border-radius: 0; /* Straight edges */
+  border-radius: 0; 
 }
 
 .navbar-left {
@@ -66,7 +66,7 @@
   padding: 0.7rem 1rem;
   white-space: nowrap;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  display: inline-block; /* Ensures transform works */
+  display: inline-block; 
 }
 
 .nav-links i {
@@ -78,8 +78,8 @@
   color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  transform: translateY(-4px) scale(1.02); /* Lift effect and slight zoom */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+  transform: translateY(-4px) scale(1.02); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
 .menu-icons {
@@ -174,7 +174,7 @@
 }
 
 
-  /* Music Icon */
+  /* music icon ayeee */
 .music-icon {
   cursor: pointer;
   display: flex;
@@ -188,29 +188,30 @@
 .music-icon:hover {
   color: #222; 
   font-family: Outfit;
-  transform: translateY(-4px) scale(1.03); /* Lift effect and slight zoom */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+  transform: translateY(-4px) scale(1.03); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 
 }
 
-/* Spotify Player Popup */
+/* spotify player popup here woohoo */
 .spotify-popup {
   position: fixed;
-  top: 90px; /* Position it below the navbar */
-  right: 20px; /* Align it to the right */
-  z-index: 1000; /* Ensure it appears on top */
+  top: 90px; 
+  right: 20px; 
+  z-index: 1000; 
   font-size: 2rem;
 }
+
 /* When the player is visible */
 /* .spotify-popup.visible {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: all; /* Ensure it's clickable */
+  pointer-events: all; 
 /* } */ */
-
 /* When the player is hidden */
+
 .spotify-popup.hidden {
   opacity: 0;
   transform: translateY(-20px);
-  pointer-events: none; /* Disable interaction */
+  pointer-events: none; 
 }

@@ -5,7 +5,7 @@ import '../css/Resume.css';
 const Resume = () => {
   return (
     <div className="resume-page">
-      {/* Resume Header */}
+      {/* resume header stated here */}
       <h2
         data-aos="fade-down"
         data-aos-duration="1500"
@@ -14,16 +14,16 @@ const Resume = () => {
         Resume
       </h2>
 
-      {/* Display Resume Image */}
+      {/* displaying resume image below */}
       <div className="resume-container">
         <img
-          src={`${process.env.PUBLIC_URL}/Darla_Valderrama_2025_Resume copy.jpg`} // Update the path to your image
+          src={`${process.env.PUBLIC_URL}/Darla_Valderrama_2025_Resume copy.jpg`}
           alt="Darla Valderrama Resume"
           className="resume-image"
         />
       </div>
 
-      {/* Download Button */}
+      {/* download button for rese */}
       <div className="resume-download">
         <a
           href={`${process.env.PUBLIC_URL}/resume2025.pdf`}

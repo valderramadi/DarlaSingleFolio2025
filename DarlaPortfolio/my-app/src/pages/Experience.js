@@ -139,8 +139,8 @@ const Experience = () => {
                   <img
                     src={tool.icon}
                     alt={tool.name}
-                    data-tooltip-id={`tooltip-${index}-${i}`} // Unique ID for each tooltip
-                    data-tooltip-content={tool.name} // Tooltip content
+                    data-tooltip-id={`tooltip-${index}-${i}`} // handles unique IDs for each tooltip
+                    data-tooltip-content={tool.name} 
                     className="tool-icon"
                   />
                   <Tooltip id={`tooltip-${index}-${i}`} place="top" />

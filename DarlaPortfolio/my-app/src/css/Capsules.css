@@ -1,9 +1,10 @@
+/* may add these into folio later - keep file here  */
 .capsules-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 2rem;
-    padding: 0 2rem; /* Add padding for responsiveness */
+    padding: 0 2rem; 
   }
   
   .capsule {
@@ -11,8 +12,8 @@
     align-items: center;
     justify-content: center;
     padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent white for dark backgrounds */
-    border-radius: 30px; /* Capsule shape */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px; 
     font-size: 1rem;
     color: white;
     font-family: 'Arial', sans-serif;
@@ -35,7 +36,7 @@
     }
   
     .capsule {
-      width: 80%; /* Make capsules full-width on smaller screens */
+      width: 80%; 
       text-align: center;
     }
   }

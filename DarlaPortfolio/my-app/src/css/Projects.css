@@ -1,21 +1,21 @@
 .projects-container {
   padding: 2rem;
   text-align: center;
-  background-image: url("../assets/contact.jpg"); /* Adjust path as needed */
-  background-size: cover; /* Ensure the image covers the entire background */
-  background-position: center; /* Center the image */
-  background-attachment: fixed; /* Optional: For a parallax scrolling effect */
-  min-height: 100vh; /* Ensure the page takes full viewport height */
+  background-image: url("../assets/contact.jpg"); 
+  background-size: cover; /* makes sure our image covers entire background */
+  background-position: center; 
+  background-attachment: fixed; /* added parallax scrolling effect */
+  min-height: 100vh; /* page takes full viewport height */
   min-width: 168vh;
-  color: white; /* Ensure text is visible against the background */
+  color: white; /* text is visible against my background */
 }
 
 .projects-container h1 {
-  font-size: 4rem; /* Adjust size to your preference */
-  font-weight: bold; /* Optional: Make it bold */
-  color: white; /* Ensure readability against your background */
-  text-align: center; /* Center the heading */
-  margin-bottom: 2rem; /* Add space below the heading */
+  font-size: 4rem; 
+  font-weight: bold; 
+  color: white; /* readability against my background */
+  text-align: center; 
+  margin-bottom: 2rem; /* adds space below the heading */
 }
 
 @keyframes slideInFromLeft {
@@ -31,23 +31,23 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
   gap: 4rem;
   margin-top: 6rem;
 }
 
 .project-card {
-  background: #1e1e2f; /* Card background */
+  background: #1e1e2f; 
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-15px) scale(1.03); /* Hover effect */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Larger and darker shadow */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+  transform: translateY(-15px) scale(1.03); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
 .project-image {
@@ -70,7 +70,7 @@
 
 .project-category {
   font-size: 1rem;
-  color: #ffcc66; /* Accent color for category */
+  color: #ffcc66; 
   margin-bottom: 1rem;
 }
 
@@ -89,14 +89,14 @@
 
 .tech-tag {
   background: #333;
-  color: #66ccff; /* Tag color */
+  color: #66ccff; 
   padding: 0.3rem 0.6rem;
   border-radius: 5px;
   font-size: 0.8rem;
 }
 
 .project-image-container {
-  position: relative; /* Enables absolute positioning for children */
+  position: relative; 
 }
 
 .project-image {
@@ -106,12 +106,12 @@
 
 .world-icon {
   position: absolute;
-  top: 10px; /* Adjust to fine-tune position */
-  right: 10px; /* Adjust to fine-tune position */
+  top: 10px; 
+  right: 10px; 
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7); /* brought this dark semi-transparent background */
   color: white;
   display: flex;
   justify-content: center;
@@ -119,12 +119,12 @@
   text-decoration: none;
   font-size: 20px;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  z-index: 10; /* Ensures it stays on top */
+  z-index: 10; /* stays on top */
 }
 
 .world-icon:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
-  background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+  transform: scale(1.1); 
+  background-color: rgba(0, 0, 0, 0.9); 
 }
 
 .world-icon i {
@@ -135,7 +135,7 @@
   margin: 20px auto;
   max-width: 800px;
   text-align: justify;
-  font-size: 1.25rem; /* Adjust for emphasis */
+  font-size: 1.25rem; 
   color: #f0f0f0;
   background: rgba(0, 0, 0, 0.6);
   padding: 15px 30px;

@@ -1,17 +1,17 @@
-/* Base styles */
+/* added base styles here as well */
 body {
     margin: 0;
-    font-family: Arial, sans-serif; /* Replace with your chosen font */
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    font-family: Arial, sans-serif; 
+    scroll-behavior: smooth; 
   }
   
-  /* Navbar positioning */
+  /* navbar positioning begins below */
   nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent navbar */
-    z-index: 100; /* Ensure it stays above other content */
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 100; 
     display: flex;
     justify-content: center;
     padding: 1rem 0;
@@ -32,27 +32,25 @@ body {
   }
   
   nav ul li:hover {
-    color: #00bcd4; /* Accent color on hover */
+    color: #00bcd4; 
   }
   
-  /* Highlight the active section */
   nav ul li.active {
-    color: #00bcd4; /* Highlight color */
-    border-bottom: 2px solid #00bcd4; /* Optional underline for active */
+    color: #00bcd4; 
+    border-bottom: 2px solid #00bcd4;
   }
   
-  /* Section styles */
+
   section {
-    min-height: 100vh; /* Full viewport height for each section */
+    min-height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    scroll-snap-align: start; /* Snap to sections on scroll */
+    scroll-snap-align: start; 
   }
   
   
-  /* Responsive design */
   @media (max-width: 768px) {
     nav ul {
       flex-direction: column;

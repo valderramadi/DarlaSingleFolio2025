@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import "../css/navbar.css";
 import { MenuItems } from "./MenuItems";
@@ -6,7 +5,7 @@ import { MenuItems } from "./MenuItems";
 class Navbar extends Component {
   state = {
     clicked: false,
-    isSpotifyVisible: false, // State to toggle visibility (not unmounting)
+    isSpotifyVisible: false, 
   };
 
   handleClick = () => {
@@ -14,7 +13,7 @@ class Navbar extends Component {
   };
 
   toggleSpotifyVisibility = () => {
-    this.setState({ isSpotifyVisible: !this.state.isSpotifyVisible }); // Toggle visibility
+    this.setState({ isSpotifyVisible: !this.state.isSpotifyVisible }); 
   };
 
   render() {
@@ -52,20 +51,20 @@ class Navbar extends Component {
             <li key={index}>
               <a
                 className={item.cName}
-                href={`#${item.url}`} // Hash-based scrolling
+                href={`#${item.url}`} // holds the hash-based scrolling
               >
                 <i className={item.icon}></i>
                 {item.title}
               </a>
             </li>
           ))}
-          {/* Music Icon */}
+          {/* music icon home */}
           <li onClick={this.toggleSpotifyVisibility} className="music-icon">
             <i className="fas fa-music"></i> Music
           </li>
         </ul>
 
-        {/* Spotify Player Popup */}
+        {/* spotify player popup inserted here!! */}
         <div
           className={`spotify-popup ${
             this.state.isSpotifyVisible ? "visible" : "hidden"
@@ -73,7 +72,7 @@ class Navbar extends Component {
         >
           <iframe
             style={{ borderRadius: "10px" }}
-            src="https://open.spotify.com/embed/playlist/6x9mkRpNdXlM54AKhXhnAr?utm_source=generator&theme=0" 
+            src= "https://open.spotify.com/embed/playlist/6x9mkRpNdXlM54AKhXhnAr?utm_source=generator&theme=0" 
             width="300"
             height="380"
             frameBorder="0"

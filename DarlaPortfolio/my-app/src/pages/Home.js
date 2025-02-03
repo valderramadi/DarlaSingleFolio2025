@@ -15,12 +15,12 @@ function Home() {
   const [circleVisibility, setCircleVisibility] = useState([false, false, false]);
 
   useEffect(() => {
-    // Show the second line of text after 1.9 seconds
+    // shows the second line of text after 1.9ish seconds
     const timeoutForText = setTimeout(() => {
       setShowSecondLine(true);
     }, 1950);
 
-    // Show the circles 6 seconds after the second line finishes typing
+    // shows the circles 6 seconds after the second line finishes typing
     const timeoutForCircles = setTimeout(() => {
       circleVisibility.forEach((_, index) => {
         setTimeout(() => {
@@ -29,9 +29,9 @@ function Home() {
             newState[index] = true;
             return newState;
           });
-        }, index * 1000); // Delay each circle by 1 second
+        }, index * 1000); // slight delay each circle by 1 sec
       });
-    }, 3000); // Wait 3000 seconds after the text finishes
+    }, 3000); // waits ab 3000 seconds after the text finishes
 
     return () => {
       clearTimeout(timeoutForText);
@@ -64,7 +64,7 @@ function Home() {
           </div>
         }
       />
-      {/* New Highlights Section */}
+      {/* added new highlights section below */}
       <div className="highlights-section">
         <div
           className={`highlight-circle ${

@@ -1,6 +1,6 @@
-//db connection logic and using mongo to connect to mongodb database
-const mongoose = require('mongoose');
+//db connection logic --> connect mongodb (for future use when we integrate)
 
+const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
@@ -10,7 +10,6 @@ const connectDB = async () => {
     console.log('MongoDB connected...');
   } catch (error) {
     console.error(error.message);
-    // exit process with failure
     process.exit(1);
   }
 };

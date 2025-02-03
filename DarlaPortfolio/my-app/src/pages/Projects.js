@@ -83,13 +83,13 @@ function Projects() {
       <h1 data-aos="fade-down" data-aos-duration="1500">
         Projects
       </h1>
-      {/* Project Summary Section */}
+      {/* project summary section below */}
       <div className="project-summary" data-aos="fade-up" data-aos-duration="1500">
         <p>
         The beauty of data is that it holds answers—we just have to ask the right questions. It's been my lens for understanding the world—whether it’s analyzing trends, fine-tuning models, or uncovering hidden insights. I love the challenge of connecting technical expertise with real-world impact, continuously learning and exploring new domains to turn raw data into meaningful solutions. Check out some of my favorite projects below!
         </p>
       </div>
-      {/* Project Grid */}
+      {/* project grid below*/}
       <div className="projects-grid" data-aos="fade-up" data-aos-duration="1500">
         {projectsData.map((project, index) => (
           <div className="project-card" key={index}>
@@ -110,7 +110,7 @@ function Projects() {
                   <i className="fa-solid fa-earth-americas"></i>
                 </a>
               )}
-              {/* Overlay for Power BI Project */}
+              {/* added overlay for Power BI project */}
               {index === projectsData.length - 1 && <div className="overlay-text">Coming Soon ...</div>}
             </div>
             <div className="project-content">

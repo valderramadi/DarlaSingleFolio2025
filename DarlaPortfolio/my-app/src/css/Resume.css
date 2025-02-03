@@ -5,9 +5,9 @@
   justify-content: center;
   padding: 2rem;
   background: url('../assets/contact.jpg') no-repeat center center fixed;
-  background-size: cover; /* Ensure the image covers the entire background */
-  background-position: center; /* Center the image */
-  background-attachment: fixed; /* Optional: For a parallax scrolling effect */
+  background-size: cover; /* this is ensuring my image covers the entire background */
+  background-position: center; 
+  background-attachment: fixed; /* creates parallax scrolling effect */
   min-height: 175vh;
   min-width: 168vh;
 }
@@ -30,17 +30,17 @@
 .resume-image {
   width: 100%;
   height: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for better appearance */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* adds shadow here */
   border-radius: 10px;
 }
 
 
 .resume-download .download-button {
-  position: relative; /* Keeps the button within the Resume section */
-  right: -35rem; /* Adjust this to move the button horizontally */
-  display: block; /* Ensures it doesn't overlap */
-  margin: 0 auto; /* Centers the button */
-  top: -55rem; /* Resets any inherited positioning */
+  position: relative; /* only keeps button within resume section */
+  right: -35rem; /* adjust this to move the button horizontally if need be dv */
+  display: block; /* make sure this doesn't overlap */
+  margin: 0 auto; 
+  top: -55rem;
 }
 
 
@@ -49,7 +49,7 @@
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  text-decoration: none; /* Remove underline from the text */
+  text-decoration: none; 
   transition: transform 0.2s, background-color 0.3s ease;
 }
 
