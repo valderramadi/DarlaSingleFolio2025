@@ -9,34 +9,13 @@
     font-size: 1rem;
 }
   
+
 .experience-container h2 {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 2rem;
 }
   
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideInFromRight {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
 .vertical-timeline-element-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -67,12 +46,56 @@
 }
   
 .vertical-timeline-element-content {
-    background-color: #23283d !important;
-    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.852);
-    border-radius: 8px;
-    color: #e6e8f1; 
-    padding: 1rem;
-    text-align: justify;
+  background-color: #23283d !important;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.852);
+  border-radius: 8px;
+  color: #e6e8f1; 
+  padding: 1rem;
+  text-align: justify;
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow effect */
+  animation-duration: 1.2s; /* Slower slide-in */
+  animation-timing-function: ease-in-out; /* Smooth transition */
+}
+
+/* Apply left or right animation with proper duration */
+.left-card .vertical-timeline-element-content {
+  animation: slideInFromLeft 1.5s ease-in-out both; /* Slower slide-in */
+}
+
+.right-card .vertical-timeline-element-content {
+  animation: slideInFromRight 1.5s ease-in-out both; /* Slower slide-in */
+}
+
+/* Slide from Left */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide from Right */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-10px); /* Slight lift */
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3); /* Soft glowing effect */
 }
 
 .vertical-timeline-element-content p {
@@ -124,3 +147,4 @@
     transform: scale(1.1);
     transition: transform 0.1s;
 }
+

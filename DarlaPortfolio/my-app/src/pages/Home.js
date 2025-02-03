@@ -5,11 +5,7 @@ import Hero from "../components/Hero";
 import BackgroundVideo from "../assets/techbackground.mp4";
 import { ReactTyped } from "react-typed";
 
-// import romanticMusic from '../assets/icons/romantic-music-music-svgrepo-com.svg';
-// import neuralNet from '../assets/icons/neuralnet.svg'
-
 import musicDS from '../assets/icons/musicDS.svg';
-// import dataScience from '../assets/icons/datascience.svg';
 import coffeeLove from '../assets/icons/coffeelove.svg';
 import dS from '../assets/icons/DS.svg';
 

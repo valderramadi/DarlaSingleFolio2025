@@ -65,14 +65,14 @@ const projectsData = [
     },
   },
   {
-    title: "Power BI Upcoming Project ",
+    title: "Power BI Dashboard - In Development ",
     category: "Data Analytics | Data Visualization",
     description:
-      "In the works ...",
-    techStack: ["SQL", "R", "Seaborn", "Pandas", "Idklol"],
+      "Exploring the power of data storytelling with Power BI. This project will focus on interactive dashboards, analytics, and real-time insights. ",
+    techStack: ["powerbi", "sql", "dax", "etl", "mquery"],
     image: coffeePic, 
     links: {
-      documentation: "https://github.com/valderramadi/SpotifyProject-NN-EDA-/blob/main/Project1FinalV_AIBerk-2.ipynb",
+      documentation: "https://learn.microsoft.com/en-us/power-bi/",
   },
 }
 ];
@@ -86,11 +86,11 @@ function Projects() {
       {/* Project Summary Section */}
       <div className="project-summary" data-aos="fade-up" data-aos-duration="1500">
         <p>
-          In my journey as a data scientist, I've developed diverse projects spanning deep learning, natural language processing, and predictive analytics. Each project reflects a personal commitment to solving complex problems, delivering actionable insights, and leveraging cutting-edge technology to drive impactful results. From fine-tuning language models to analyzing financial trends, these projects showcase my ability to combine technical expertise with a data-driven mindset! Enjoy :)
+        The beauty of data is that it holds answers—we just have to ask the right questions. It's been my lens for understanding the world—whether it’s analyzing trends, fine-tuning models, or uncovering hidden insights. I love the challenge of connecting technical expertise with real-world impact, continuously learning and exploring new domains to turn raw data into meaningful solutions. Check out some of my favorite projects below!
         </p>
       </div>
       {/* Project Grid */}
-      <div className="projects-grid">
+      <div className="projects-grid" data-aos="fade-up" data-aos-duration="1500">
         {projectsData.map((project, index) => (
           <div className="project-card" key={index}>
             <div className="project-image-container">
@@ -110,6 +110,8 @@ function Projects() {
                   <i className="fa-solid fa-earth-americas"></i>
                 </a>
               )}
+              {/* Overlay for Power BI Project */}
+              {index === projectsData.length - 1 && <div className="overlay-text">Coming Soon ...</div>}
             </div>
             <div className="project-content">
               <h2>{project.title}</h2>

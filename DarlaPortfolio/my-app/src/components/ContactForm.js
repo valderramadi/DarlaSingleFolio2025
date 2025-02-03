@@ -39,7 +39,7 @@ function ContactForm() {
             console.log('Backend response:', result);
     
             if (response.ok) {
-                setStatus('Message sent successfully!');
+                setStatus('Message sent successfully! I’ll get back to you soon.');
                 setFormData({ name: '', email: '', message: '' }); // Clear form fields
             } else {
                 setStatus(result.error || 'Failed to send message. Please try again later.');
