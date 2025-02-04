@@ -19,27 +19,26 @@ function ContactForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus(''); 
+        setStatus('');
     
-        // checks if all fields are filled here 
         if (!formData.name || !formData.email || !formData.message) {
             setStatus('All fields are required.');
-            return; // does not allow for further execution
+            return;
         }
     
         try {
-            const response = await fetch('http://localhost:5001/api/contact', {
+            const response = await fetch('https://i146nmw1h5.execute-api.us-east-2.amazonaws.com/prod/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
     
-            const result = await response.json(); // parses response
+            const result = await response.json();
             console.log('Backend response:', result);
     
             if (response.ok) {
                 setStatus('Message sent successfully! I’ll get back to you soon.');
-                setFormData({ name: '', email: '', message: '' }); // clears form fields
+                setFormData({ name: '', email: '', message: '' });
             } else {
                 setStatus(result.error || 'Failed to send message. Please try again later.');
             }
@@ -48,6 +47,7 @@ function ContactForm() {
             setStatus('An error occurred. Please try again.');
         }
     };
+    
     
 
     return (
