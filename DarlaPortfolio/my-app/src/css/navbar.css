@@ -193,25 +193,27 @@
 
 }
 
-/* spotify player popup here woohoo */
+/* my spotify player popup styling begins here */
 .spotify-popup {
   position: fixed;
   top: 90px; 
   right: 20px; 
   z-index: 1000; 
   font-size: 2rem;
+  opacity: 0; /* hidden at first */
+  transform: scale(0.5); /* so starts at 50% size */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* then smooths effect */
 }
 
-/* When the player is visible */
-/* .spotify-popup.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all; 
-/* } */ */
-/* When the player is hidden */
+/* when our player is visible */
+.spotify-popup.visible {
+  opacity: 1; /* fades in  ... */
+  transform: scale(1); /* then grows to normal size */
+}
 
+/* when our player is hidden */
 .spotify-popup.hidden {
-  opacity: 0;
-  transform: translateY(-20px);
+  opacity: 0; /* ... fade out */
+  transform: scale(0.5); /* then shrinks back down */
   pointer-events: none; 
 }

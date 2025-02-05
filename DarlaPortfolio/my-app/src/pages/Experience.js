@@ -1,5 +1,4 @@
 // src/pages/Experience.js
-
 import React from 'react';
 import '../css/Experience.css'; 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';

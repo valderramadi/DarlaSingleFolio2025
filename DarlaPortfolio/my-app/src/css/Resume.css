@@ -4,8 +4,6 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: url('../assets/contact.jpg') no-repeat center center fixed;
-  background-size: cover; /* this is ensuring my image covers the entire background */
   background-position: center; 
   background-attachment: fixed; /* creates parallax scrolling effect */
   min-height: 175vh;

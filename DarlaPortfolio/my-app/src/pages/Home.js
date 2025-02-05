@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../css/Hero.css";
 import Hero from "../components/Hero";
-import BackgroundVideo from "../assets/techbackground.mp4";
 import { ReactTyped } from "react-typed";
 
 import musicDS from '../assets/icons/musicDS.svg';
@@ -44,7 +43,7 @@ function Home() {
       <Navbar />
       <Hero
         cName="hero"
-        heroVideo={BackgroundVideo}
+        // heroVideo={BackgroundVideo}
         title={
           <div className="typed-container">
             <ReactTyped
@@ -79,7 +78,7 @@ function Home() {
             circleVisibility[1] ? "visible" : "hidden"
           }`}
         >
-          <span>Data Scientist / Analyst </span>
+          <span>Data Scientist | Analyst </span>
           <img src={dS} alt="data science" className="highlight-icon" />
         </div>
         <div

@@ -1,7 +1,6 @@
 .projects-container {
   padding: 2rem;
   text-align: center;
-  background-image: url("../assets/contact.jpg"); 
   background-size: cover; /* makes sure our image covers entire background */
   background-position: center; 
   background-attachment: fixed; /* added parallax scrolling effect */
