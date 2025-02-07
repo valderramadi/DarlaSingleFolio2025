@@ -16,6 +16,7 @@
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #fffbfb;
+  will-change: transform, opacity;
 }
 
 .resume-container {

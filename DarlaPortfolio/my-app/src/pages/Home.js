@@ -10,16 +10,8 @@ import dS from '../assets/icons/DS.svg';
 
 
 function Home() {
-  const [showSecondLine, setShowSecondLine] = useState(false);
   const [circleVisibility, setCircleVisibility] = useState([false, false, false]);
-
   useEffect(() => {
-    // shows the second line of text after 1.9ish seconds
-    const timeoutForText = setTimeout(() => {
-      setShowSecondLine(true);
-    }, 1950);
-
-    // shows the circles 6 seconds after the second line finishes typing
     const timeoutForCircles = setTimeout(() => {
       circleVisibility.forEach((_, index) => {
         setTimeout(() => {
@@ -28,38 +20,28 @@ function Home() {
             newState[index] = true;
             return newState;
           });
-        }, index * 1000); // slight delay each circle by 1 sec
+        }, index * 1000); // here we are just delaying each circle by 1 sec
       });
-    }, 3000); // waits ab 3000 seconds after the text finishes
+    }, 3000); // then it waits about 3 sec before starting circle animations
 
-    return () => {
-      clearTimeout(timeoutForText);
-      clearTimeout(timeoutForCircles);
-    };
+    return () => clearTimeout(timeoutForCircles);
   }, []);
+
 
   return (
     <div className="home-container">
       <Navbar />
       <Hero
         cName="hero"
-        // heroVideo={BackgroundVideo}
         title={
           <div className="typed-container">
             <ReactTyped
-              strings={["Hi, I'm Darla! "]}
+              strings={["Hi, I'm Darla!<br />Welcome"]} 
               typeSpeed={110}
               backSpeed={50}
               loop={false}
+              smartBackspace={true}
             />
-            {showSecondLine && (
-              <ReactTyped
-                strings={["Welcome"]}
-                typeSpeed={125}
-                backSpeed={70}
-                loop={false}
-              />
-            )}
           </div>
         }
       />

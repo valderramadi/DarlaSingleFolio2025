@@ -8,8 +8,10 @@ const Resume = () => {
       {/* resume header stated here */}
       <h2
         data-aos="fade-down"
-        data-aos-duration="1500"
+        data-aos-duration="1400"
         className="resume-header"
+        data-aos-once="true"
+        data-aos-offset="100"
       >
         Resume
       </h2>

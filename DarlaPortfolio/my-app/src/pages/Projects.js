@@ -80,17 +80,17 @@ const projectsData = [
 function Projects() {
   return (
     <div className="projects-container">
-      <h1 data-aos="fade-down" data-aos-duration="1500">
+      <h1 data-aos="fade-down" data-aos-duration="1400">
         Projects
       </h1>
       {/* project summary section below */}
-      <div className="project-summary" data-aos="fade-up" data-aos-duration="1500">
+      <div className="project-summary" data-aos="fade-up" data-aos-duration="1350">
         <p>
         The beauty of data is that it holds answers—we just have to ask the right questions. It's been my lens for understanding the world—whether it’s analyzing trends, fine-tuning models, or uncovering hidden insights. I love the challenge of connecting technical expertise with real-world impact, continuously learning and exploring new domains to turn raw data into meaningful solutions. Check out some of my favorite projects below!
         </p>
       </div>
       {/* project grid below*/}
-      <div className="projects-grid" data-aos="fade-up" data-aos-duration="1500">
+      <div className="projects-grid" data-aos="fade-up" data-aos-duration="1350">
         {projectsData.map((project, index) => (
           <div className="project-card" key={index}>
             <div className="project-image-container">

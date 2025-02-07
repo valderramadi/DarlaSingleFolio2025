@@ -11,9 +11,6 @@ function Hero(props) {
             <p>
             {props.text}
             </p>
-            <p>
-            {props.texttwo}
-            </p>
             <a href={props.url} className={props.btnClass}>
             {props.buttonText} 
             </a>
