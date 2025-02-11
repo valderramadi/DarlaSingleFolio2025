@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import './css/mainpage.css';
 import Home from './pages/Home'; 
 import Experience from './pages/Experience'; 
-import Resume from './pages/Resume'; 
 import Projects from './pages/Projects'
+import Resume from './pages/Resume'; 
 import Contact from './pages/Contact'; 
 
 
@@ -15,8 +15,8 @@ const MainPage = () => {
       <Navbar />
       <section id="home"><Home /></section>
       <section id="experience"><Experience /></section>
-      <section id="resume"><Resume /></section>
       <section id="projects"><Projects /></section>
+      <section id="resume"><Resume /></section>
       <section id="contact"><Contact /></section>
     </>
   );

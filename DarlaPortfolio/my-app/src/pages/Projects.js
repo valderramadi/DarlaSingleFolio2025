@@ -6,6 +6,7 @@ import wordCloud from "../assets/wordCloud.png"
 import financialStocks from "../assets/s&p500stocks.png"
 import blueCorr from "../assets/corranalysis.spotify.png"
 import coffeePic from "../assets/coffeemusictech.jpg"
+import folioContact from "../assets/contact.jpg"
 
 const projectsData = [
   {
@@ -62,6 +63,17 @@ const projectsData = [
     image: blueCorr, 
     links: {
       documentation: "https://github.com/valderramadi/SpotifyProject-NN-EDA-/blob/main/Project1FinalV_AIBerk-2.ipynb",
+    },
+  },
+  {
+    title: "Personal Portfolio Website ",
+    category: "Full Stack Development | Cloud Deployment",
+    description:
+      "This fully responsive portfolio website was designed and deployed to showcase my technical background! Built using AWS Amplify for seamless CI/CD deployment, custom domain configuration through Route 53, and serverless architecture with AWS Lambda and API Gateway for backend integrations. Ongoing optimizations for mobile responsiveness and cross-browser compatibility to enhance your browsing experience. ",
+    techStack: ["aws amplify", "aws lambda", "api gateway", "Route 53", "JavaScript", "express.js", "node.js", "react"],
+    image: folioContact, 
+    links: {
+      documentation: "https://github.com/valderramadi/DarlaSingleFolio2025",
     },
   },
   {

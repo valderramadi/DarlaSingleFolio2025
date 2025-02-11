@@ -113,7 +113,7 @@ const experiences = [
 const Experience = () => {
   return (
     <div className="experience-container">
-      <h2 data-aos="fade-down" data-aos-duration="1400">Experiences</h2>
+      <h2 data-aos="fade-down" data-aos-duration="1400">Experience</h2>
       <VerticalTimeline>
         {experiences.map((experience, index) => (
           <VerticalTimelineElement
