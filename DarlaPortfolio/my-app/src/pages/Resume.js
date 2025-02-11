@@ -19,7 +19,7 @@ const Resume = () => {
       {/* displaying resume image below */}
       <div className="resume-container">
         <img
-          src={`${process.env.PUBLIC_URL}/Darla_Valderrama_2025_Resume copy.jpg`}
+          src={`${process.env.PUBLIC_URL}/Darla_Valderrama_2025_Resume_Portfolio.jpg`}
           alt="Darla Valderrama Resume"
           className="resume-image"
         />
